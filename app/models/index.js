@@ -26,7 +26,11 @@ db.country = require("./country.model.js")(sequelize, Sequelize);
 db.user = require("./user.model.js")(sequelize, Sequelize);
 db.role = require("./role.model.js")(sequelize, Sequelize);
 db.log_login = require("./log_login.model")(sequelize, Sequelize);
-
+db.position = require("./position.model")(sequelize, Sequelize);
+db.employee = require("./employee.model")(sequelize, Sequelize);
+db.education = require("./education.model")(sequelize, Sequelize);
+db.experice = require("./experience.model")(sequelize, Sequelize);
+db.religion = require("./religion.model")(sequelize, Sequelize);
 
 //ONE TO MANY
 // db.role.hasMany(db.user, {
@@ -65,6 +69,6 @@ db.club.belongsTo(db.country, {
 //     as: "user",
 // });
 
-db.ROLES = ["admin", "student", "teacher","headmaster","library","financial","operational"];
+db.ROLES = ["admin", "student", "teacher","headmaster","library","financial","operational","parent"];
 
 module.exports = db;
